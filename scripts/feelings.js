@@ -64,8 +64,9 @@
             });
 
             $(".btnNext").click(function(){
-                console.log($(this));
-                var btnNextIndex = parseInt($(this).index($(this)) + 1); //get the index of the next question
+                //var btnNextIndex = ($(this).index($(this)) + 1).toString(); //get the index of the next question
+                var btnNextIndex = ($(this).index(".btnNext") + 1).toString();//need to find more accurate index
+                console.log(btnNextIndex)
                 var targetQuestion = ".questions:eq(" + btnNextIndex + ")";
                 $("html, body").animate({
                     scrollTop: $(targetQuestion).offset().top
