@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charse="utf-8">
+        <script src="./jquery/jquery.min.js"></script>
+        <Script src="./scripts/feelings.js"></script>
+    </head>
+    <body style="margin: 0 auto">
+        <div id="questions-container">
+            <form method="POST" action="">
+                <nav>
+                    <ul id="ul-questions">
+                    </ul>
+                </nav>
+                <section id="question1" class="questions">
+                    <input type="checkbox" name="checkbox-question" class="checkbox-question" value="option 1">
+                    <input type="checkbox" name="checkbox-question" class="checkbox-question" value="option 2">
+                    <input type="checkbox" name="checkbox-question" class="checkbox-question" value="option 3">
+                    <input type="checkbox" name="checkbox-question" class="checkbox-question" value="option 4">
+                    <button type="button" class="btnNext">NEXT QUESTION</button>
+                </section>
+                <section id="question2" class="questions">
+                    question2
+                </section>
+                <section id="question3" class="questions">
+                    question3
+                </section>
+                <section id="question4" class="questions">
+                    question4
+                </section>
+                <section id="question5" class="questions">
+                    question5
+                </section>
+                <section id="question6" class="questions">
+                    question6
+                </section>
+                <section id="question7" class="questions">
+                    question7
+                </section>
+                <section id="question8" class="questions">
+                    question8
+                </section>
+                <div id="prev-next-buttons">
+                    <button type="button">Prev</button>
+                    <button type="button">Next</button>
+                </div>
+            </form>
+        </div>
+        <!--<script>
+        (function(){
+            window.onload = function(){
+                var ulQuestions = document.getElementById("ul-questions");
+                var questions = document.getElementsByClassName("questions");
+                for(var qui = 1; qui <=8; qui++){
+                    //ulQuestions.innerHTML += "<li class='li-questions'><a href='#question" + qui.toString() + "'>" + qui.toString() + "</a></li>";
+                    ulQuestions.innerHTML += "<li class='li-questions'><div class='li-questions--circle'>" + qui.toString() + "</div></li>";
+                }
+                jQuery(function($){
+                    //height of window
+                    var winHeight = $(window).innerHeight();
+
+                    $("#questions-container").css({
+                        "position": "relative",
+                        "margin": "0 auto",
+                        "max-width": "980px",
+                        "outline": "1px solid black"
+                    });
+
+                    $("#ul-questions").css({
+                        "position": "fixed",
+                        "top": "5%",
+                        "left": $("#questions-container").offset.left + "20px",
+                        "list-style-type": "none"
+                    });
+
+                    $(".li-questions").css({
+                        "margin-top": "10px",
+                    });
+
+                    $(".questions").css({
+                        "width": "80%",
+                        "height": winHeight,
+                        "margin": "0 auto",
+                        "text-align": "center",
+                        "outline": "1px solid black"
+                    });
+
+                    $("#prev-next-buttons").css({
+                        "text-align": "center"
+                    });
+
+                    //functionality
+                    $(".li-questions").click(function(){
+                        var questionIndex = (parseInt(this.innerHTML) - 1).toString();
+                        var targetQuestion = ".questions:eq(" + questionIndex + ")";
+                        $("html, body").animate({
+                            scrollTop: $(targetQuestion).offset().top
+                        }, 500);
+                    });
+                });
+            }
+        })();
+        </script>-->
+    </body>
+</html>
