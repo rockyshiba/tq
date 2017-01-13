@@ -159,23 +159,28 @@
 
             //question 8
             $("#question8").children(".questions-container").css({
-                "position": "relative",
+                "max-width": "80%",
+                "margin": "0 auto",
+                "position": "relative"
             });
 
             $("#question8").children(".questions-container").children("label").css({
-                "text-align": "center",
+                "display": "inline-block",
+                //"width": "170px",
+                "width": "180px",
                 "margin": "0 auto",
-                "display": "block",
-                "clear": "both",
-                "font-size": "1.5em",
-                "width": "350px",
-                "padding-top": "5px",
-                "padding-bottom": "5px",
-                "margin-bottom": "5px",
+                "padding": "10px 10px 10px 10px",
+                "font-size": "1.8em",
+                "margin-bottom": "10px",
+                "margin-right": "2.5px",
+                "margin-left": "2.5px",
                 "cursor": "pointer"
             });
+
+            //hide textarea by default
+            $("#question8").children("textarea").hide();
             //END question 8
-            
+
             $(".label-radio").css({
                 "position": "relative"
             });
@@ -267,6 +272,11 @@
                 }, 500);
             });
 
+            //Question 8
+            $("label[for=radio-referral-other]").click(function(){
+                $("textarea[name=radio-referral]").slideDown();
+            });
+            //END question 8
             //function that animates a custom radio button
             // $(".label-radio").click(function(){
             //     var radioId = $(this).attr("for");
