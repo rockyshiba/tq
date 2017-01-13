@@ -6,9 +6,30 @@
             //ulQuestions.innerHTML += "<li class='li-questions'><a href='#question" + qui.toString() + "'>" + qui.toString() + "</a></li>";
             ulQuestions.innerHTML += "<li class='li-questions'><div class='li-questions--circle'>" + qui.toString() + "</div></li>";
         }
+
         jQuery(function ($) {
             //height of window
             var winHeight = $(window).innerHeight();
+
+            //hide all inputs in this questionair
+            $("input[type=radio]").hide();
+            $("input[type=checkbox]").hide();
+
+            //TEMP SCAFFOLDING
+            $("label").css({
+                "outline": "1px solid black"
+            });
+
+            $(".questions-container").css({
+                "outline": "1px solid black",
+                "display": "block"
+            });
+
+            $(".questions-container").children("label").css({
+                "display": "block",
+                "clear": "both"
+            });
+            //END TEMP SCAFFOLDING
 
             $("p").css({
                 "margin-top": "50px",
@@ -21,7 +42,21 @@
             });
 
             //question 1
-            $("input[type=radio]").hide();
+            $(".questions-container").children("label").css({
+                "display": "block",
+                "clear": "both",
+                "max-width": "350px",
+                "margin": "0 auto",
+                "padding": "5px",
+                "margin-top": "5px"
+            });
+
+                //textarea
+            $("checkbox-why--5").css({
+                "clear": "both",
+                "margin": "0 auto"
+            });
+                //end textarea
 
             $(".label-radio").css({
                 "position": "relative"
@@ -82,7 +117,7 @@
                 "height": winHeight,
                 "margin": "0 auto",
                 "text-align": "center",
-                "outline": "1px solid black"
+                "outline": "1px solid black" //TEMP
             });
 
             $("#prev-next-buttons").css({
