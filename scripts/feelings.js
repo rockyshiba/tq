@@ -157,6 +157,25 @@
             });
             //END question 7
 
+            //question 8
+            $("#question8").children(".questions-container").css({
+                "position": "relative",
+            });
+
+            $("#question8").children(".questions-container").children("label").css({
+                "text-align": "center",
+                "margin": "0 auto",
+                "display": "block",
+                "clear": "both",
+                "font-size": "1.5em",
+                "width": "350px",
+                "padding-top": "5px",
+                "padding-bottom": "5px",
+                "margin-bottom": "5px",
+                "cursor": "pointer"
+            });
+            //END question 8
+            
             $(".label-radio").css({
                 "position": "relative"
             });
