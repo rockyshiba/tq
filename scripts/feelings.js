@@ -2,7 +2,7 @@
     window.onload = function () {
         var ulQuestions = document.getElementById("ul-questions");
         var questions = document.getElementsByClassName("questions");
-        for (var qui = 1; qui <= 8; qui++) {
+        for (var qui = 1; qui <= 9; qui++) {
             //ulQuestions.innerHTML += "<li class='li-questions'><a href='#question" + qui.toString() + "'>" + qui.toString() + "</a></li>";
             ulQuestions.innerHTML += "<li class='li-questions'><div class='li-questions--circle'>" + qui.toString() + "</div></li>";
         }
