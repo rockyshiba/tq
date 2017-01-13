@@ -248,9 +248,66 @@
             });
 
             //functionality
+                //scrolling highlights the li-questions--circles
+            window.addEventListener("scroll", function(){
+                $(".li-questions--circle").css({
+                    "height": "1em",
+                    "width": "1em"
+                });
+                if($("body").scrollTop() >= $("#question8").offset().top){
+                    $(".li-questions--circle:eq(7)").css({
+                        "height": "1.2em",
+                        "width": "1.2em"
+                    });
+                }
+                else if($("body").scrollTop() >= $("#question7").offset().top){
+                    $(".li-questions--circle:eq(6)").css({
+                        "height": "1.2em",
+                        "width": "1.2em"
+                    });                    
+                }
+                else if($("body").scrollTop() >= $("#question6").offset().top){
+                    $(".li-questions--circle:eq(5)").css({
+                        "height": "1.2em",
+                        "width": "1.2em"
+                    });                    
+                }
+                else if($("body").scrollTop() >= $("#question5").offset().top){
+                    $(".li-questions--circle:eq(4)").css({
+                        "height": "1.2em",
+                        "width": "1.2em"
+                    });                    
+                }
+                else if($("body").scrollTop() >= $("#question4").offset().top){
+                    $(".li-questions--circle:eq(3)").css({
+                        "height": "1.2em",
+                        "width": "1.2em"
+                    });                    
+                }
+                else if($("body").scrollTop() >= $("#question3").offset().top){
+                    $(".li-questions--circle:eq(2)").css({
+                        "height": "1.2em",
+                        "width": "1.2em"
+                    });                    
+                }
+                else if($("body").scrollTop() >= $("#question2").offset().top){
+                    $(".li-questions--circle:eq(1)").css({
+                        "height": "1.2em",
+                        "width": "1.2em"
+                    });                    
+                }
+                else if($("body").scrollTop() >= $("#question1").offset().top){
+                    $(".li-questions--circle:eq(0)").css({
+                        "height": "1.2em",
+                        "width": "1.2em"
+                    });                    
+                }
+            });
+
             $(".li-questions--circle").click(function () {
                 //clicking on the circles scrolls to the question associated with the circle
-                var questionIndex = (parseInt(this.innerHTML) - 1).toString();
+                //var questionIndex = (parseInt(this.innerHTML) - 1).toString();
+                var questionIndex = $(this).index(".li-questions--circle");
                 var targetQuestion = ".questions:eq(" + questionIndex + ")";
                 $("html, body").animate({
                     scrollTop: $(targetQuestion).offset().top
@@ -263,7 +320,6 @@
             });
 
             $(".btnNext[type=button]").click(function(){
-                //var btnNextIndex = ($(this).index($(this)) + 1).toString(); //get the index of the next question
                 var btnNextIndex = ($(this).index(".btnNext") + 1).toString();//need to find more accurate index
                 console.log(btnNextIndex)
                 var targetQuestion = ".questions:eq(" + btnNextIndex + ")";
