@@ -248,26 +248,27 @@
                 }, 500);
             });
 
-            $(".label-radio").click(function(){
-                var radioId = $(this).attr("for");
-                document.getElementById(radioId).checked = true;
-                //console.log(document.getElementById(radioId));
-                if(document.getElementById(radioId).checked){
-                    console.log("associated id is checked");
-                    //float all label-radio--button--selectors to the left
-                    $(".label-radio--button---selector").css({
-                        "float": "left",
-                        "background-color": "grey"
-                    });
-                    $(this).find(".label-radio--button .label-radio--button---selector").css({
-                        "float": "right",
-                        "background-color": "green"
-                    });
-                }
-                else{
-                    console.log("associated id is not checked");
-                }
-            });
+            //function that animates a custom radio button
+            // $(".label-radio").click(function(){
+            //     var radioId = $(this).attr("for");
+            //     document.getElementById(radioId).checked = true;
+            //     //console.log(document.getElementById(radioId));
+            //     if(document.getElementById(radioId).checked){
+            //         console.log("associated id is checked");
+            //         //float all label-radio--button--selectors to the left
+            //         $(".label-radio--button---selector").css({
+            //             "float": "left",
+            //             "background-color": "grey"
+            //         });
+            //         $(this).find(".label-radio--button .label-radio--button---selector").css({
+            //             "float": "right",
+            //             "background-color": "green"
+            //         });
+            //     }
+            //     else{
+            //         console.log("associated id is not checked");
+            //     }
+            // });
         });
     }
 })();
