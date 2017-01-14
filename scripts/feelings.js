@@ -1,5 +1,4 @@
 (function () {
-    window.onload = function () {
         var ulQuestions = document.getElementById("ul-questions");
         var questions = document.getElementsByClassName("questions");
         for (var qui = 1; qui <= 8; qui++) {
@@ -218,6 +217,7 @@
             //     "outline": "1px solid black"
             // });
 
+            //side nav
             $("#ul-questions").css({
                 "position": "fixed",
                 "top": "5%",
@@ -232,10 +232,12 @@
             $(".li-questions--circle").css({
                 "height": "1em",
                 "width": "1em",
+                "border": "2px solid orange",
                 "border-radius": "50%",
-                "background-color": "grey",
+                "background-color": "white",
                 "cursor": "pointer"
             });
+            //END side nav
 
             $(".questions").css({
                 "width": "80%",
@@ -252,10 +254,55 @@
             //functionality
                 //scrolling highlights the li-questions--circles
             window.addEventListener("scroll", function(){
+
+                //set all nav buttons to the same size
+                //set all nav buttons to be visually empty
                 $(".li-questions--circle").css({
                     "height": "1em",
-                    "width": "1em"
+                    "width": "1em",
+                    "background-color": "white"
                 });
+
+                //question 1
+                if($(".checkbox-help:checked").val() !== undefined){
+                    completedQuestionButton(".li-questions--circle:eq(0)");
+                }
+
+                //question 2
+                if($("input[name=radio-felt]:checked").val() !== undefined){
+                    completedQuestionButton(".li-questions--circle:eq(1)");
+                }
+
+                //question 3
+                if($("#select-committment").val() !== "0"){
+                    completedQuestionButton(".li-questions--circle:eq(2)");
+                }
+
+                //question 4
+                if($("input[name=radio-long]:checked").val() !== undefined){
+                    completedQuestionButton(".li-questions--circle:eq(3)");
+                }
+
+                //question 5
+                if($("input[name=radio-choose]:checked").val() !== undefined){
+                    completedQuestionButton(".li-questions--circle:eq(4)");
+                }
+
+                //question 6
+                if($("input[name=radio-prefer]:checked").val() !== undefined){
+                    completedQuestionButton(".li-questions--circle:eq(5)");
+                }
+
+                //question 7
+                if($("input[name=radio-gender]:checked").val() !== undefined){
+                    completedQuestionButton(".li-questions--circle:eq(6)");
+                }
+
+                //question 8
+                if($("input[name=radio-referral]:checked").val() !== undefined){
+                    completedQuestionButton(".li-questions--circle:eq(7)");
+                }
+
                 if($("body").scrollTop() >= $("#question8").offset().top){
                     $(".li-questions--circle:eq(7)").css({
                         "height": "1.2em",
@@ -364,6 +411,7 @@
             }
             //END done button
 
+            //FUNCTIONS
             function getCheckboxVals(elem){
                 allVals = [];
                 $(elem + " :checked").each(function(){
@@ -376,6 +424,10 @@
                 $("html, body").animate({
                     scrollTop: $(elem).offset().top
                 }, 500);
+            }
+
+            function completedQuestionButton(elem){
+                $(elem).css("background-color", "orange");
             }
             //END question 8
             //function that animates a custom radio button
@@ -400,5 +452,5 @@
             //     }
             // });
         });
-    }
+
 })();
