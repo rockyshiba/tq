@@ -20,9 +20,11 @@
                 "outline": "1px solid black"
             });
 
-            $(".questions-container").css({
+            $("#questions-container").css({
                 "outline": "1px solid black",
-                "display": "block"
+                "display": "block",
+                "max-width": "1000px",
+                "margin": "0 auto"
             });
 
             $(".questions-container").children("label").css({
@@ -329,9 +331,52 @@
             });
 
             //Question 8
+                //Reveal the other option
             $("label[for=radio-referral-other]").click(function(){
                 $("textarea[name=radio-referral]").slideDown();
             });
+
+            //Done button
+            document.getElementById("btnDone").onclick = function(){
+                console.log($("input[name=radio-felt]:checked").val());
+                if($("input[name=radio-felt]:checked").val() === undefined){
+                    scrollToElem("#question2");
+                }
+                else if($("#select-committment").val() === "0"){
+                    scrollToElem("#question3");
+                }
+                else if($("input[name=radio-long]:checked").val() === undefined){
+                    scrollToElem("#question4");
+                }
+                else if($("input[name=radio-choose]:checked").val() === undefined){
+                    scrollToElem("#question5");
+                }
+                else if($("input[name=radio-prefer]:checked").val() === undefined){
+                    scrollToElem("#question6");
+                }
+                else if($("input[name=radio-gender]:checked").val() === undefined){
+                    scrollToElem("#question7");
+                }
+                else if($("input[name=radio-referral]:checked").val() === undefined){
+                    scrollToElem("#question8");
+                }
+                return false;
+            }
+            //END done button
+
+            function getCheckboxVals(elem){
+                allVals = [];
+                $(elem + " :checked").each(function(){
+                    allVals.push(($(this).val()));
+                });
+                console.log(allVals);
+            }
+
+            function scrollToElem(elem){
+                $("html, body").animate({
+                    scrollTop: $(elem).offset().top
+                }, 500);
+            }
             //END question 8
             //function that animates a custom radio button
             // $(".label-radio").click(function(){
