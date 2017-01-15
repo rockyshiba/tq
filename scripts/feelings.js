@@ -43,6 +43,18 @@
                 "overflow": "auto"
             });
 
+            //labels
+            $(".questions").children("label").css({
+                "background-color": "#36C2E3",
+                "color": "white"
+            });
+
+            $(".questions-container").children("label").css({
+                "background-color": "#36C2E3",
+                "color": "white"
+            });
+            //END labels
+
             //btnNext
             $(".btnNext").css({
                 "width": "100px",
@@ -252,6 +264,28 @@
             });
 
             //functionality
+
+            //clicking labels
+            $("label").click(function(){
+                var thisLabel = $(this);
+                var targetId = $(this).attr("for");
+                console.log(targetId);
+                console.log(document.getElementById(targetId).checked);
+                if(document.getElementById(targetId).checked === false){
+                    document.getElementById(targetId).checked = true;
+                    //$(this).css("background-color", "#36C2E3");
+                    //thisLabel.style.backgroundColor = "#36C2E3";
+                    $("label[for=" + targetId + "]").css("background-color", "#36C2E3");
+                }
+                else{
+                    document.getElementById(targetId).checked = false;
+                    //$(this).css("background-color", "#F05462");
+                    //thisLabel.style.backgroundColor = "#F05462";
+                    $(thisLabel).css("background-color", "#F05462");
+                    $("label[for=" + targetId + "]").css("background-color", "#36C2E3");
+                }
+            });
+            //END clicking labels
                 //scrolling highlights the li-questions--circles
             window.addEventListener("scroll", function(){
 
