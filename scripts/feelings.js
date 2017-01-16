@@ -15,9 +15,10 @@
             $("input[type=checkbox]").hide();
 
             //TEMP SCAFFOLDING
-            $("label").css({
-                "outline": "1px solid black"
-            });
+            // $("label").css({
+            //     "outline": "1px solid black",
+            //     "transition": "background 0.75s"
+            // });
 
             $("#feelings-container").css({
                 "outline": "1px solid black",
@@ -47,12 +48,14 @@
             //labels
             $(".questions").children("label").css({
                 "background-color": "#36C2E3",
-                "color": "white"
+                "color": "white",
+                "transition": "background 0.75s"
             });
 
             $(".questions-container").children("label").css({
                 "background-color": "#36C2E3",
-                "color": "white"
+                "color": "white",
+                "transition": "background 0.75s"
             });
             //END labels
 
@@ -75,7 +78,7 @@
 
             //question 1
             $(".questions-container").css({
-                "max-width": "80%",
+                "max-width": "100%",
                 "margin": "0 auto",
                 "position": "relative"
             });
