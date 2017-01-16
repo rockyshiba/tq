@@ -266,25 +266,6 @@
             //functionality
 
             //clicking labels
-            $("label").click(function(){
-                var thisLabel = $(this);
-                var targetId = $(this).attr("for");
-                console.log(targetId);
-                console.log(document.getElementById(targetId).checked);
-                if(document.getElementById(targetId).checked === false){
-                    document.getElementById(targetId).checked = true;
-                    //$(this).css("background-color", "#36C2E3");
-                    //thisLabel.style.backgroundColor = "#36C2E3";
-                    $("label[for=" + targetId + "]").css("background-color", "#36C2E3");
-                }
-                else{
-                    document.getElementById(targetId).checked = false;
-                    //$(this).css("background-color", "#F05462");
-                    //thisLabel.style.backgroundColor = "#F05462";
-                    $(thisLabel).css("background-color", "#F05462");
-                    $("label[for=" + targetId + "]").css("background-color", "#36C2E3");
-                }
-            });
             //END clicking labels
                 //scrolling highlights the li-questions--circles
             window.addEventListener("scroll", function(){
@@ -411,11 +392,66 @@
                 }, 500);
             });
 
+            //Question 1
+            $(".label-help").click(function(){
+                console.log(this.style.backgroundColor);
+                if(this.style.backgroundColor === "rgb(54, 194, 227)"){ //need to use rgb value instead of hex for evaluation of colors
+                    this.style.backgroundColor = "#F05462";
+                }
+                else{
+                    this.style.backgroundColor = "rgb(54, 194, 227)";
+                }
+            });
+            //END question 1
+
+            //Question 2
+            $("#question2").children("label").click(function(){
+                $("#question2").children("label").css("backgroundColor", "rgb(54, 194, 227)");
+                this.style.backgroundColor = "#F05462";
+            });
+            //End Question 2
+            
+            //Question 4
+            $("#question4").children("label").click(function(){
+                $("#question4").children("label").css("background-color", "rgb(54, 194, 227)");
+                this.style.backgroundColor = "#F05462";
+            });
+            //END question 4
+
+            //Question 5
+            $("#question5").children(".questions-container").children("label").click(function(){
+                $("#question5").children(".questions-container").children("label").css("backgroundColor", "rgb(54, 194, 227)");
+                this.style.backgroundColor = "#F05462";
+            });
+            //END question 5
+
+            //Question 6
+            $("#question6").children(".questions-container").children("label").click(function(){
+                $("#question6").children(".questions-container").children("label").css("backgroundColor", "rgb(54, 194, 227)");
+                this.style.backgroundColor = "#F05462";
+            });
+            //END question 6
+
+            //Question 7
+            $("#question7").children(".questions-container").children("label").click(function(){
+                $("#question7").children(".questions-container").children("label").css("backgroundColor", "rgb(54, 194, 227)");
+                this.style.backgroundColor = "#F05462";
+            });
+            //END Question 7
+
+            //Question 8
+            $("#question8").children(".questions-container").children("label").click(function(){
+                $("#question8").children(".questions-container").children("label").css("backgroundColor", "rgb(54, 194, 227)");
+                this.style.backgroundColor = "#F05462";
+            });
+            //END question 8
+
             //Question 8
                 //Reveal the other option
             $("label[for=radio-referral-other]").click(function(){
                 $("textarea[name=radio-referral]").slideDown();
             });
+            //END question 8
 
             //Done button
             document.getElementById("btnDone").onclick = function(){
