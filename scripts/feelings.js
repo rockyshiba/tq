@@ -19,11 +19,12 @@
                 "outline": "1px solid black"
             });
 
-            $("#questions-container").css({
+            $("#feelings-container").css({
                 "outline": "1px solid black",
                 "display": "block",
                 "max-width": "1000px",
-                "margin": "0 auto"
+                "margin": "0 auto",
+                "transition": "all 0.5s"
             });
 
             $(".questions-container").children("label").css({
@@ -57,14 +58,18 @@
 
             //btnNext
             $(".btnNext").css({
-                "width": "100px",
+                "width": "150px",
+                "height": "50px",
                 "position": "absolute",
                 "text-align": "center",
                 "margin-left": "auto",
                 "margin-right": "auto",
                 "left": "0",
                 "right": "0",
-                "bottom": "60px"
+                "bottom": "60px",
+                "background-color": "#AFD580",
+                "color": "#414041",
+                "border": "none"
             });
             //END btnNext
 
@@ -221,19 +226,12 @@
                 "border": "none",
                 "border-bottom": "1px solid black"
             });
-            //question 3
-            // $("#questions-container").css({
-            //     "position": "relative",
-            //     "margin": "0 auto",
-            //     "max-width": "980px",
-            //     "outline": "1px solid black"
-            // });
 
             //side nav
             $("#ul-questions").css({
                 "position": "fixed",
                 "top": "5%",
-                "left": $("#questions-container").offset.left + "20px",
+                "left": $("#feelings-container").offset.left + "20px",
                 "list-style-type": "none"
             });
 
@@ -257,10 +255,6 @@
                 "margin": "0 auto",
                 "text-align": "center",
                 "outline": "1px solid black" //TEMP
-            });
-
-            $("#prev-next-buttons").css({
-                "text-align": "center"
             });
 
             //functionality
@@ -385,7 +379,7 @@
 
             $(".btnNext[type=button]").click(function(){
                 var btnNextIndex = ($(this).index(".btnNext") + 1).toString();//need to find more accurate index
-                console.log(btnNextIndex)
+                console.log(btnNextIndex);
                 var targetQuestion = ".questions:eq(" + btnNextIndex + ")";
                 $("html, body").animate({
                     scrollTop: $(targetQuestion).offset().top
