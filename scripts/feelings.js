@@ -313,8 +313,10 @@
                 });
 
                 $(".btnNext").css({
+                    "margin-top": "10px",
                     "position": "relative",
-                    "bottom": "5px"
+                    "bottom": "5px",
+                    "cursor": "pointer"
                 });
                 
                 //Questions 1-8                
@@ -487,8 +489,8 @@
             //END question 1
 
             //Question 2
-            $("#question2").children("label").click(function(){
-                $("#question2").children("label").css("backgroundColor", "rgb(54, 194, 227)");
+            $("#question2").children(".questions-container").children("label").click(function(){
+                $("#question2").children(".questions-container").children("label").css("backgroundColor", "rgb(54, 194, 227)");
                 this.style.backgroundColor = "#F05462";
                 $(".btnNext:eq(1)").css("background-color", "#AFD580");
             });
@@ -506,8 +508,8 @@
             //END question 3
             
             //Question 4
-            $("#question4").children("label").click(function(){
-                $("#question4").children("label").css("background-color", "rgb(54, 194, 227)");
+            $("#question4").children(".questions-container").children("label").click(function(){
+                $("#question4").children(".questions-container").children("label").css("background-color", "rgb(54, 194, 227)");
                 this.style.backgroundColor = "#F05462";
                 $(".btnNext:eq(3)").css("background-color", "#AFD580");
             });
