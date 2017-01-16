@@ -83,7 +83,7 @@
                 "left": "0",
                 "right": "0",
                 "bottom": "60px",
-                "background-color": "grey", 
+                "background-color": "#989898", 
                 "color": "#414041",
                 "border": "none",
                 "font-family": "roboto, sans-serif",
@@ -250,7 +250,7 @@
                 "width": "50%",
                 "height": "100%",
                 //"outline": "1px solid green",
-                "background-color": "grey",
+                "background-color": "#989898",
                 "float": "left"
             });
 
@@ -499,7 +499,7 @@
             //Question 3
             $("#select-committment").change(function(){
                 if($("#select-committment").val() === "0"){
-                    $(".btnNext:eq(2)").css("background-color", "grey");
+                    $(".btnNext:eq(2)").css("background-color", "#989898");
                 }
                 else{
                     $(".btnNext:eq(2)").css("background-color", "#AFD580");
@@ -544,6 +544,19 @@
                 $("#question8").children(".questions-container").children("label").css("backgroundColor", "rgb(54, 194, 227)");
                 this.style.backgroundColor = "#F05462";
                 isQuestionaireDone();
+                if (
+                    ($(".checkbox-help:checked").val() !== undefined) && //question 1
+                    ($("input[name=radio-felt]:checked").val() !== undefined) && //question 2
+                    ($("#select-committment").val() !== "0") && //question 3
+                    ($("input[name=radio-long]:checked").val() !== undefined) && //question 4
+                    ($("input[name=radio-choose]:checked").val() !== undefined) && //question 5
+                    ($("input[name=radio-prefer]:checked").val() !== undefined) && //question 6
+                    ($("input[name=radio-gender]:checked").val() !== undefined) //question 7
+                ){
+                    //special case because question 8 is still undefined the first time you click on a question 8 label
+                    $("#btnDone").prop("disabled", "false");
+                    $("#btnDone").css("background-color", "#AFD580");
+                }
             });
 
                 //Reveal the other option
@@ -612,7 +625,8 @@
                     ($("input[name=radio-prefer]:checked").val() !== undefined) && //question 6
                     ($("input[name=radio-gender]:checked").val() !== undefined) && //question 7
                     ($("input[name=radio-referral]:checked").val() !== undefined) //question 8
-                ){
+                )
+                {
                     questionaireDone = true;
                 }
 
@@ -621,7 +635,7 @@
                     $("#btnDone").css("background-color", "#AFD580");
                 }
                 else{
-                    $("#btnDone").css("background-color", "grey");
+                    $("#btnDone").css("background-color", "#989898");
                     $("#btnDone").prop("disabled", "true");
                     //$("#btnDone").val("Please answer as best as you can");
                 }
