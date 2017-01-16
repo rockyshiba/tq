@@ -82,7 +82,7 @@
                 "left": "0",
                 "right": "0",
                 "bottom": "60px",
-                "background-color": "#AFD580",
+                "background-color": "grey", //tq green
                 "color": "#414041",
                 "border": "none",
                 "font-family": "roboto, sans-serif",
@@ -274,7 +274,7 @@
             $(".li-questions--circle").css({
                 "height": "1em",
                 "width": "1em",
-                "border": "2px solid orange",
+                "border": "2px solid #F9B54A",
                 "border-radius": "50%",
                 "background-color": "white",
                 "cursor": "pointer"
@@ -447,7 +447,8 @@
             $(".label-help").click(function(){
                 console.log(this.style.backgroundColor);
                 if(this.style.backgroundColor === "rgb(54, 194, 227)"){ //need to use rgb value instead of hex for evaluation of colors
-                    this.style.backgroundColor = "#F05462";
+                    this.style.backgroundColor = "#F05462"; //pink
+                    $(".btnNext:eq(0)").css("background-color", "#AFD580");
                 }
                 else{
                     this.style.backgroundColor = "rgb(54, 194, 227)";
@@ -459,13 +460,26 @@
             $("#question2").children("label").click(function(){
                 $("#question2").children("label").css("backgroundColor", "rgb(54, 194, 227)");
                 this.style.backgroundColor = "#F05462";
+                $(".btnNext:eq(1)").css("background-color", "#AFD580");
             });
             //End Question 2
+
+            //Question 3
+            $("#select-committment").change(function(){
+                if($("#select-committment").val() === "0"){
+                    $(".btnNext:eq(2)").css("background-color", "grey");
+                }
+                else{
+                    $(".btnNext:eq(2)").css("background-color", "#AFD580");
+                }
+            });
+            //END question 3
             
             //Question 4
             $("#question4").children("label").click(function(){
                 $("#question4").children("label").css("background-color", "rgb(54, 194, 227)");
                 this.style.backgroundColor = "#F05462";
+                $(".btnNext:eq(3)").css("background-color", "#AFD580");
             });
             //END question 4
 
@@ -473,6 +487,7 @@
             $("#question5").children(".questions-container").children("label").click(function(){
                 $("#question5").children(".questions-container").children("label").css("backgroundColor", "rgb(54, 194, 227)");
                 this.style.backgroundColor = "#F05462";
+                $(".btnNext:eq(4)").css("background-color", "#AFD580");
             });
             //END question 5
 
@@ -480,6 +495,7 @@
             $("#question6").children(".questions-container").children("label").click(function(){
                 $("#question6").children(".questions-container").children("label").css("backgroundColor", "rgb(54, 194, 227)");
                 this.style.backgroundColor = "#F05462";
+                $(".btnNext:eq(5)").css("background-color", "#AFD580");
             });
             //END question 6
 
@@ -487,6 +503,7 @@
             $("#question7").children(".questions-container").children("label").click(function(){
                 $("#question7").children(".questions-container").children("label").css("backgroundColor", "rgb(54, 194, 227)");
                 this.style.backgroundColor = "#F05462";
+                $(".btnNext:eq(6)").css("background-color", "#AFD580");
             });
             //END Question 7
 
@@ -494,10 +511,9 @@
             $("#question8").children(".questions-container").children("label").click(function(){
                 $("#question8").children(".questions-container").children("label").css("backgroundColor", "rgb(54, 194, 227)");
                 this.style.backgroundColor = "#F05462";
+                isQuestionaireDone();
             });
-            //END question 8
 
-            //Question 8
                 //Reveal the other option
             $("label[for=radio-referral-other]").click(function(){
                 $("textarea[name=radio-referral]").slideDown();
@@ -549,7 +565,7 @@
             }
 
             function completedQuestionButton(elem){
-                $(elem).css("background-color", "orange");
+                $(elem).css("background-color", "#F9B54A");
             }
 
             function isQuestionaireDone(){
