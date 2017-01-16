@@ -266,7 +266,7 @@
             //END clicking labels
                 //scrolling highlights the li-questions--circles
             window.addEventListener("scroll", function(){
-
+                var questionaireDone = false;
                 //set all nav buttons to the same size
                 //set all nav buttons to be visually empty
                 $(".li-questions--circle").css({
@@ -313,6 +313,26 @@
                 //question 8
                 if($("input[name=radio-referral]:checked").val() !== undefined){
                     completedQuestionButton(".li-questions--circle:eq(7)");
+                }
+
+                //sets quesionaireDone boolean
+                if(
+                    ($("input[name=radio-felt]:checked").val() !== undefined ) && //question 2
+                    ($("#select-committment").val() !== "0") && //question 3
+                    ($("input[name=radio-long]:checked").val() !== undefined) && //question 4
+                    ($("input[name=radio-choose]:checked").val() !== undefined) && //question 5
+                    ($("input[name=radio-prefer]:checked").val() !== undefined) && //question 6
+                    ($("input[name=radio-gender]:checked").val() !== undefined) && //question 7
+                    ($("input[name=radio-referral]:checked").val() !== undefined) //question 8
+                ){
+                    questionaireDone = true;
+                }
+
+                if(questionaireDone){
+                    $("#btnDone").val("Done");
+                }
+                else{
+                    $("#btnDone").val("Please answer as best as you can");
                 }
 
                 if($("body").scrollTop() >= $("#question8").offset().top){
@@ -453,6 +473,7 @@
             //Done button
             document.getElementById("btnDone").onclick = function(){
                 console.log($("input[name=radio-felt]:checked").val());
+
                 if($("input[name=radio-felt]:checked").val() === undefined){
                     scrollToElem("#question2");
                 }
