@@ -32,12 +32,16 @@
                 "display": "block",
                 "clear": "both"
             });
+
+            $("body").css({"font-family": "roboto"});
             //END TEMP SCAFFOLDING
 
             $(".questions p").css({
                 "margin-top": "50px",
                 "display": "inline-block",
-                "font-size": "1.6em"
+                "font-size": "24px",
+                "font-family": "Quicksand, sans-serif",
+                "font-weight": "regular"
             });
 
             $(".questions").css({
@@ -49,19 +53,27 @@
             $(".questions").children("label").css({
                 "background-color": "#36C2E3",
                 "color": "white",
-                "transition": "background 0.75s"
+                "transition": "background 0.75s",
+                "border-radius": "5px",
+                "font-family": "roboto",
+                "font-size": "19px",
+                "font-weight": "medium"
             });
 
             $(".questions-container").children("label").css({
                 "background-color": "#36C2E3",
                 "color": "white",
-                "transition": "background 0.75s"
+                "transition": "background 0.75s",
+                "border-radius": "5px",
+                "font-family": "roboto",
+                "font-size": "19px",
+                "font-weight": "medium"
             });
             //END labels
 
             //btnNext
             $(".btnNext").css({
-                "width": "150px",
+                "width": "225px",
                 "height": "50px",
                 "position": "absolute",
                 "text-align": "center",
@@ -72,7 +84,11 @@
                 "bottom": "60px",
                 "background-color": "#AFD580",
                 "color": "#414041",
-                "border": "none"
+                "border": "none",
+                "font-family": "roboto, sans-serif",
+                "font-weight": "light",
+                "font-size": "19px",
+                "border-radius": "5px"
             });
             //END btnNext
 
@@ -89,11 +105,12 @@
                 "width": "180px",
                 "margin": "0 auto",
                 "padding": "10px 10px 10px 10px",
-                "font-size": "1.8em",
                 "margin-bottom": "10px",
                 "margin-right": "2.5px",
                 "margin-left": "2.5px",
-                "cursor": "pointer"
+                "cursor": "pointer",
+                "min-height": "50px",
+                "overflow": "auto"
             });
             //END question 1
 
@@ -103,14 +120,22 @@
                 "margin": "0 auto",
                 "display": "block",
                 "clear": "both",
-                "font-size": "1.5em",
+                //"font-size": "1.5em",
                 "width": "350px",
-                "padding-top": "5px",
-                "padding-bottom": "5px",
-                "margin-bottom": "5px",
+                "padding-top": "10px",
+                "padding-bottom": "10px",
+                "margin-bottom": "7px",
                 "cursor": "pointer"
             });
             //END question 2
+
+            //Question 3
+            $("#select-committment").css({
+                "font-family": "roboto",
+                "font-size": "23px",
+                "border-radius": "5px"
+            });
+            //END question 3
 
             //question 4
             $("#question4").children("label").css({
@@ -118,11 +143,11 @@
                 "margin": "0 auto",
                 "display": "block",
                 "clear": "both",
-                "font-size": "1.5em",
+                //"font-size": "1.5em",
                 "width": "350px",
-                "padding-top": "5px",
-                "padding-bottom": "5px",
-                "margin-bottom": "5px",
+                "padding-top": "10px",
+                "padding-bottom": "10px",
+                "margin-bottom": "7px",
                 "cursor": "pointer"
             });
             //End question 4
@@ -133,11 +158,11 @@
                 "margin": "0 auto",
                 "display": "block",
                 "clear": "both",
-                "font-size": "1.5em",
+                //"font-size": "1.5em",
                 "width": "350px",
-                "padding-top": "5px",
-                "padding-bottom": "5px",
-                "margin-bottom": "5px",
+                "padding-top": "10px",
+                "padding-bottom": "10px",
+                "margin-bottom": "7px",
                 "cursor": "pointer"
             });
             //END question 5
@@ -148,11 +173,11 @@
                 "margin": "0 auto",
                 "display": "block",
                 "clear": "both",
-                "font-size": "1.5em",
-                "width": "350px",
-                "padding-top": "5px",
-                "padding-bottom": "5px",
-                "margin-bottom": "5px",
+                //"font-size": "1.5em",
+                "width": "375px",
+                "padding-top": "10px",
+                "padding-bottom": "10px",
+                "margin-bottom": "7px",
                 "cursor": "pointer"
             });
             //END question 6
@@ -165,17 +190,19 @@
             $("#question7").children(".questions-container").children("label").css({
                 "text-align": "center",
                 "vertical-align": "middle",
-                "line-height": "100px",
                 "margin": "0 auto",
                 "display":"inline-block",
-                "height": "100px",
-                "width": "100px",
+                "height": "135px",
+                "width": "135px",
+                "line-height": "135px", //this must match the height of the circle for the text to be vertically aligned
                 "margin-left": "10px",
                 "margin-right": "10px",
                 "border": "1px solid black",
                 "border-radius": "50%",
-                "cursor": "pointer"
+                "cursor": "pointer",
+                "position": "relative"
             });
+            console.log($("#question7").children(".questions-container").children("label").height());
             //END question 7
 
             //question 8
@@ -191,11 +218,13 @@
                 "width": "180px",
                 "margin": "0 auto",
                 "padding": "10px 10px 10px 10px",
-                "font-size": "1.8em",
+                //"font-size": "1.8em",
                 "margin-bottom": "10px",
                 "margin-right": "2.5px",
                 "margin-left": "2.5px",
-                "cursor": "pointer"
+                "cursor": "pointer",
+                "overflow": "auto",
+                "min-height": "50px"
             });
 
             //hide textarea by default
@@ -233,7 +262,7 @@
             //side nav
             $("#ul-questions").css({
                 "position": "fixed",
-                "top": "5%",
+                "top": "25%",
                 "left": $("#feelings-container").offset.left + "20px",
                 "list-style-type": "none"
             });
@@ -266,7 +295,7 @@
             //END clicking labels
                 //scrolling highlights the li-questions--circles
             window.addEventListener("scroll", function(){
-                var questionaireDone = false;
+
                 //set all nav buttons to the same size
                 //set all nav buttons to be visually empty
                 $(".li-questions--circle").css({
@@ -315,25 +344,30 @@
                     completedQuestionButton(".li-questions--circle:eq(7)");
                 }
 
+                isQuestionaireDone();
                 //sets quesionaireDone boolean
-                if(
-                    ($("input[name=radio-felt]:checked").val() !== undefined ) && //question 2
-                    ($("#select-committment").val() !== "0") && //question 3
-                    ($("input[name=radio-long]:checked").val() !== undefined) && //question 4
-                    ($("input[name=radio-choose]:checked").val() !== undefined) && //question 5
-                    ($("input[name=radio-prefer]:checked").val() !== undefined) && //question 6
-                    ($("input[name=radio-gender]:checked").val() !== undefined) && //question 7
-                    ($("input[name=radio-referral]:checked").val() !== undefined) //question 8
-                ){
-                    questionaireDone = true;
-                }
+                // if(
+                //     ($(".checkbox-help:checked").val() !== undefined) && //question 1
+                //     ($("input[name=radio-felt]:checked").val() !== undefined ) && //question 2
+                //     ($("#select-committment").val() !== "0") && //question 3
+                //     ($("input[name=radio-long]:checked").val() !== undefined) && //question 4
+                //     ($("input[name=radio-choose]:checked").val() !== undefined) && //question 5
+                //     ($("input[name=radio-prefer]:checked").val() !== undefined) && //question 6
+                //     ($("input[name=radio-gender]:checked").val() !== undefined) && //question 7
+                //     ($("input[name=radio-referral]:checked").val() !== undefined) //question 8
+                // ){
+                //     questionaireDone = true;
+                // }
 
-                if(questionaireDone){
-                    $("#btnDone").val("Done");
-                }
-                else{
-                    $("#btnDone").val("Please answer as best as you can");
-                }
+                // if(questionaireDone){
+                //     $("#btnDone").prop("disabled", "false");
+                //     $("#btnDone").css("background-color", "#AFD580");
+                // }
+                // else{
+                //     $("#btnDone").css("background-color", "grey");
+                //     $("#btnDone").prop("disabled", "true");
+                //     //$("#btnDone").val("Please answer as best as you can");
+                // }
 
                 if($("body").scrollTop() >= $("#question8").offset().top){
                     $(".li-questions--circle:eq(7)").css({
@@ -516,6 +550,33 @@
 
             function completedQuestionButton(elem){
                 $(elem).css("background-color", "orange");
+            }
+
+            function isQuestionaireDone(){
+                var questionaireDone = false;
+                //sets quesionaireDone boolean
+                if(
+                    ($(".checkbox-help:checked").val() !== undefined) && //question 1
+                    ($("input[name=radio-felt]:checked").val() !== undefined ) && //question 2
+                    ($("#select-committment").val() !== "0") && //question 3
+                    ($("input[name=radio-long]:checked").val() !== undefined) && //question 4
+                    ($("input[name=radio-choose]:checked").val() !== undefined) && //question 5
+                    ($("input[name=radio-prefer]:checked").val() !== undefined) && //question 6
+                    ($("input[name=radio-gender]:checked").val() !== undefined) && //question 7
+                    ($("input[name=radio-referral]:checked").val() !== undefined) //question 8
+                ){
+                    questionaireDone = true;
+                }
+
+                if(questionaireDone){
+                    $("#btnDone").prop("disabled", "false");
+                    $("#btnDone").css("background-color", "#AFD580");
+                }
+                else{
+                    $("#btnDone").css("background-color", "grey");
+                    $("#btnDone").prop("disabled", "true");
+                    //$("#btnDone").val("Please answer as best as you can");
+                }
             }
             //END question 8
             //function that animates a custom radio button

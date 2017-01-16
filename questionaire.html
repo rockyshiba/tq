@@ -3,6 +3,8 @@
     <head>
         <meta charse="utf-8">
         <script src="./jquery/jquery.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
     </head>
     <body style="margin: 0 auto">
         <div id="feelings-container">
@@ -105,11 +107,13 @@
                     <div class="questions-container">
                         <label for="radio-gender--male">Male</label>
                         <label for="radio-gender--female">Female</label>
-                        <label for="radio-gender--intersex">Intersex</label>
+                        <label for="radio-gender--other">Other</label>
+                        <label for="radio-gender--undeclared">Rather not say</label>
                     </div>
                     <input type="radio" name="radio-gender" id="radio-gender--male" value="male">
                     <input type="radio" name="radio-gender" id="radio-gender--female" value="female">
-                    <input type="radio" name="radio-gender" id="radio-gender--intersex" value="intersex">
+                    <input type="radio" name="radio-gender" id="radio-gender--other" value="other">
+                    <input type="radio" name="radio-gender" id="radio-gender--undeclared" value="undeclared">
                     <button type="button" class="btnNext">NEXT QUESTION</button>
                 </section>
                 <section id="question8" class="questions">
@@ -120,7 +124,7 @@
                         <label class="label-referral" for="radio-referral-physician">Physician referral<br></label>
                         <label class="label-referral" for="radio-referral-friends-family">Friend/Family Member<br></label>
                         <label class="label-referral" for="radio-referral-news">News outlet<br></label>
-                        <label class="label-referral" for="radio-referral-uni-college">University /<br>College</label>
+                        <label class="label-referral" for="radio-referral-uni-college">University or<br>College</label>
                         <label class="label-referral" for="radio-referral-other">Other</label>
                     </div>
                     <textarea class="label-referral" name="radio-referral" rows="5" cols="40" placeholder="How did you hear about us?"></textarea>
