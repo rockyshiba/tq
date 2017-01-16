@@ -69,6 +69,7 @@
                 "font-size": "19px",
                 "font-weight": "medium"
             });
+
             //END labels
 
             //btnNext
@@ -82,7 +83,7 @@
                 "left": "0",
                 "right": "0",
                 "bottom": "60px",
-                "background-color": "grey", //tq green
+                "background-color": "grey", 
                 "color": "#414041",
                 "border": "none",
                 "font-family": "roboto, sans-serif",
@@ -289,6 +290,60 @@
                 "outline": "1px solid black" //TEMP
             });
 
+            //mobile
+            if(window.innerWidth < 780){
+
+            }
+
+            if(window.innerWidth < 420){
+                $("#ul-questions").css({
+                    "left": "10px",
+                    "top": "10%",
+                    "padding": "0"
+                });
+
+                $(".questions").css({
+                    "height": "auto"
+                });
+
+                $(".questions").children("label").css({
+                    "max-height": "auto"
+                });
+
+                $(".questions-container").children("label").css({
+                    "max-height": "auto"
+                });
+
+                $(".btnNext").css({
+                    "position": "relative",
+                    "bottom": "5px"
+                });
+                
+                //Questions 1-8                
+                $(".questions").children("label").css({
+                    "clear": "both",
+                    "width": "80%"                     
+                });
+
+                $(".questions-container").children("label").css({
+                    "clear": "both",
+                    "width": "80%"                    
+                });
+
+                //Question 7 gender
+                $("#question7").children(".questions-container").children("label").css({
+                    "height": "auto",
+                    "width": "80%",
+                    "line-height": "100%",
+                    "border-radius": "0%",
+                    "border": "none",
+                    "padding-top": "10px",
+                    "padding-bottom": "10px",
+                    "margin-bottom": "7px",
+                    "border-radius": "5px"
+                });
+            }
+
             //functionality
 
             //clicking labels
@@ -345,29 +400,6 @@
                 }
 
                 isQuestionaireDone();
-                //sets quesionaireDone boolean
-                // if(
-                //     ($(".checkbox-help:checked").val() !== undefined) && //question 1
-                //     ($("input[name=radio-felt]:checked").val() !== undefined ) && //question 2
-                //     ($("#select-committment").val() !== "0") && //question 3
-                //     ($("input[name=radio-long]:checked").val() !== undefined) && //question 4
-                //     ($("input[name=radio-choose]:checked").val() !== undefined) && //question 5
-                //     ($("input[name=radio-prefer]:checked").val() !== undefined) && //question 6
-                //     ($("input[name=radio-gender]:checked").val() !== undefined) && //question 7
-                //     ($("input[name=radio-referral]:checked").val() !== undefined) //question 8
-                // ){
-                //     questionaireDone = true;
-                // }
-
-                // if(questionaireDone){
-                //     $("#btnDone").prop("disabled", "false");
-                //     $("#btnDone").css("background-color", "#AFD580");
-                // }
-                // else{
-                //     $("#btnDone").css("background-color", "grey");
-                //     $("#btnDone").prop("disabled", "true");
-                //     //$("#btnDone").val("Please answer as best as you can");
-                // }
 
                 if($("body").scrollTop() >= $("#question8").offset().top){
                     $(".li-questions--circle:eq(7)").css({
