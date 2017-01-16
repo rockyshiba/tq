@@ -95,6 +95,7 @@
 
             //question 1
             $(".questions-container").css({
+                "top": "10%",
                 "max-width": "100%",
                 "margin": "0 auto",
                 "position": "relative"
@@ -116,7 +117,7 @@
             //END question 1
 
             //question 2
-            $("#question2").children("label").css({
+            $("#question2").children(".questions-container").children("label").css({
                 "text-align": "center",
                 "margin": "0 auto",
                 "display": "block",
@@ -132,14 +133,17 @@
 
             //Question 3
             $("#select-committment").css({
-                "font-family": "roboto",
+                "font-family": "Quicksand, sans-serif",
                 "font-size": "23px",
-                "border-radius": "5px"
+                "border-radius": "none",
+                "border": "none",
+                "border-bottom": "2px solid black",
+                "background-color": "transparent"
             });
             //END question 3
 
             //question 4
-            $("#question4").children("label").css({
+            $("#question4").children(".questions-container").children("label").css({
                 "text-align": "center",
                 "margin": "0 auto",
                 "display": "block",
@@ -229,7 +233,7 @@
             });
 
             //hide textarea by default
-            $("#question8").children("textarea").hide();
+            $("#question8").children(".questions-container").children("textarea").hide();
             //END question 8
 
             $(".label-radio").css({
@@ -252,12 +256,6 @@
                 //"outline": "1px solid green",
                 "background-color": "#989898",
                 "float": "left"
-            });
-
-            //question 2
-            $("#select-committment").css({
-                "border": "none",
-                "border-bottom": "1px solid black"
             });
 
             //side nav

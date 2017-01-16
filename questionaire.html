@@ -40,10 +40,12 @@
                 </section>
                 <section id="question2" class="questions">
                     <p>Over the past 2 weeks how often have you felt agitated, anxious, nervous, or on edge?</p>
-                    <label for="radio-felt-not-at-all">Not at all</label>
-                    <label for="radio-felt-a-few-days">A few days</label>
-                    <label for="radio-felt-half-the-days">Half the days</label>
-                    <label for="radio-felt-every-single-day">Every single day</label>
+                    <div class="questions-container">
+                        <label for="radio-felt-not-at-all">Not at all</label>
+                        <label for="radio-felt-a-few-days">A few days</label>
+                        <label for="radio-felt-half-the-days">Half the days</label>
+                        <label for="radio-felt-every-single-day">Every single day</label>
+                    </div>
                     <input type="radio" name="radio-felt" value="Not at all" id="radio-felt-not-at-all">
                     <input type="radio" name="radio-felt" value="A few days" id="radio-felt-a-few-days">
                     <input type="radio" name="radio-felt" value="Half the days" id="radio-felt-half-the-days">
@@ -54,7 +56,7 @@
                     <p>How committed are you to getting better?</p><br>
                     <p>I am 
                         <select name="select-committment" id="select-committment">
-                            <option value="0">--Choose a response--</option>
+                            <option value="0"></option>
                             <option value="very committed">very committed</option>
                             <option value="I am willing to try">willing to try</option>
                             <option value="Not sure if I am ready">not sure if I am ready</option>
@@ -65,10 +67,12 @@
                 </section>
                 <section id="question4" class="questions">
                     <p>What are your expectations of how long it will take to get better? (select one)</p>
-                    <label for="radio-long--2">2 sessions</label>
-                    <label for="radio-long--8">8 sessions</label>
-                    <label for="radio-long--10">10+ sessions</label>
-                    <label for="radio-long--no">No idea</label>
+                    <div class="questions-container">
+                        <label for="radio-long--2">2 sessions</label>
+                        <label for="radio-long--8">8 sessions</label>
+                        <label for="radio-long--10">10+ sessions</label>
+                        <label for="radio-long--no">No idea</label>                        
+                    </div>
                     <input type="radio" name="radio-long" id="radio-long--2" value="2 sessions">
                     <input type="radio" name="radio-long" id="radio-long--8" value="8 sessions">
                     <input type="radio" name="radio-long" id="radio-long--10" value="10+ sessions">
@@ -127,8 +131,8 @@
                         <label class="label-referral" for="radio-referral-news">News outlet<br></label>
                         <label class="label-referral" for="radio-referral-uni-college">University or<br>College</label>
                         <label class="label-referral" for="radio-referral-other">Other</label>
+                        <textarea class="label-referral" name="radio-referral" rows="5" cols="40" placeholder="How did you hear about us?"></textarea>
                     </div>
-                    <textarea class="label-referral" name="radio-referral" rows="5" cols="40" placeholder="How did you hear about us?"></textarea>
                     <input type="radio" name="radio-referral" id="radio-referral-social-media" value="social media">
                     <input type="radio" name="radio-referral" id="radio-referral-ttc" value="ttc">
                     <input type="radio" name="radio-referral" id="radio-referral-physician" value="physician">
