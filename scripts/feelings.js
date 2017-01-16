@@ -3,7 +3,7 @@
         var questions = document.getElementsByClassName("questions");
         for (var qui = 1; qui <= 8; qui++) {
             //ulQuestions.innerHTML += "<li class='li-questions'><a href='#question" + qui.toString() + "'>" + qui.toString() + "</a></li>";
-            ulQuestions.innerHTML += "<li class='li-questions'><div class='li-questions--circle'>" + qui.toString() + "</div></li>";
+            ulQuestions.innerHTML += "<li class='li-questions'><div class='li-questions--circle'></div></li>";
         }
 
         jQuery(function ($) {
@@ -21,7 +21,7 @@
             // });
 
             $("#feelings-container").css({
-                "outline": "1px solid black",
+                //"outline": "1px solid black",
                 "display": "block",
                 "max-width": "1000px",
                 "margin": "0 auto",
@@ -198,7 +198,7 @@
                 "line-height": "135px", //this must match the height of the circle for the text to be vertically aligned
                 "margin-left": "10px",
                 "margin-right": "10px",
-                "border": "1px solid black",
+                //"border": "1px solid black",
                 "border-radius": "50%",
                 "cursor": "pointer",
                 "position": "relative"
@@ -240,7 +240,7 @@
                 "display": "inline-block",
                 "width": "20px",
                 "height": "1em",
-                "outline": "1px solid black",
+                //"outline": "1px solid black",
                 "position": "relative",
                 "background-color": "red"
             });
@@ -249,7 +249,7 @@
                 "display": "inline-block",
                 "width": "50%",
                 "height": "100%",
-                "outline": "1px solid green",
+                //"outline": "1px solid green",
                 "background-color": "grey",
                 "float": "left"
             });
@@ -287,7 +287,7 @@
                 "height": winHeight,
                 "margin": "0 auto",
                 "text-align": "center",
-                "outline": "1px solid black" //TEMP
+                //"outline": "1px solid black" //TEMP
             });
 
             //mobile
