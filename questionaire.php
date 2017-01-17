@@ -8,6 +8,11 @@
         <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
     </head>
     <body style="margin: 0 auto">
+        <?php
+            if(isset($_POST['feelings-submit'])){
+                var_dump($_POST);
+            }
+        ?>
         <div id="feelings-container">
             <form method="POST" action="">
                 <nav>
@@ -140,7 +145,7 @@
                     <input type="radio" name="radio-referral" id="radio-referral-news" value="news">
                     <input type="radio" name="radio-referral" id="radio-referral-uni-college" value="university/college">
                     <input type="radio" name="radio-referral" id="radio-referral-other" value="other">
-                    <input type="button" name="feelings-submit" value="Done" id="btnDone">
+                    <input type="submit" name="feelings-submit" value="Done" id="btnDone">
                 </section>
             </form>
         </div>

@@ -88,6 +88,27 @@
             });
             //END btnNext
 
+            //btnDone
+            $("#btnDone").css({
+                "width": "225px",
+                "height": "50px",
+                "position": "absolute",
+                "text-align": "center",
+                "margin-left": "auto",
+                "margin-right": "auto",
+                "left": "0",
+                "right": "0",
+                "bottom": "60px",
+                "background-color": "#989898", 
+                "color": "#414041",
+                "border": "none",
+                "font-family": "roboto, sans-serif",
+                "font-weight": "light",
+                "font-size": "19px",
+                "border-radius": "5px"
+            });
+            //END btnDone
+
             $(".questions-container").css({
                 "top": "25%",
                 "max-width": "100%",
@@ -556,7 +577,7 @@
                     ($("input[name=radio-gender]:checked").val() !== undefined) //question 7
                 ){
                     //special case because question 8 is still undefined the first time you click on a question 8 label
-                    $("#btnDone").prop("disabled", "false");
+                    $("#btnDone").removeAttr("disabled");
                     $("#btnDone").css("background-color", "#AFD580");
                 }
             });
@@ -592,7 +613,6 @@
                 else if($("input[name=radio-referral]:checked").val() === undefined){
                     scrollToElem("#question8");
                 }
-                return false;
             }
             //END done button
 
@@ -633,7 +653,7 @@
                 }
 
                 if(questionaireDone){
-                    $("#btnDone").prop("disabled", "false");
+                    $("#btnDone").removeAttr("disabled");
                     $("#btnDone").css("background-color", "#AFD580");
                 }
                 else{
