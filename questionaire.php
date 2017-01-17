@@ -33,14 +33,14 @@
                         <label for="checkbox-help--9" class="label-help">Low self-esteem</label>
                     </div>
                     <input type="checkbox" name="checkbox-help[]" class="checkbox-help" id="checkbox-help--1" value="Low mood">
-                    <input type="checkbox" name="checkbox-help[]" class="checkbox-help" id="checkbox-help--2" value="Anxiety/stress">
+                    <input type="checkbox" name="checkbox-help[]" class="checkbox-help" id="checkbox-help--2" value="Anxiety/ Stress">
                     <input type="checkbox" name="checkbox-help[]" class="checkbox-help" id="checkbox-help--3" value="Social anxiety">
                     <input type="checkbox" name="checkbox-help[]" class="checkbox-help" id="checkbox-help--4" value="Relationship problems">
                     <input type="checkbox" name="checkbox-help[]" class="checkbox-help" id="checkbox-help--5" value="Eating disorders">
                     <input type="checkbox" name="checkbox-help[]" class="checkbox-help" id="checkbox-help--6" value="Sleeping problems">
-                    <input type="checkbox" name="checkbox-help[]" class="checkbox-help" id="checkbox-help--7" value="Work related problems">
+                    <input type="checkbox" name="checkbox-help[]" class="checkbox-help" id="checkbox-help--7" value="Work-related problems">
                     <input type="checkbox" name="checkbox-help[]" class="checkbox-help" id="checkbox-help--8" value="Concentration problems">
-                    <input type="checkbox" name="checkbox-help[]" class="checkbox-help" id="checkbox-help--9" value="Low self-esteem">
+                    <input type="checkbox" name="checkbox-help[]" class="checkbox-help" id="checkbox-help--9" value="Low Self-esteem">
                     <button type="button" class="btnNext">Next question</button>
                 </section>
                 <section id="question2" class="questions">
