@@ -44,11 +44,6 @@
                 "font-weight": "regular"
             });
 
-            $(".questions").css({
-                "position": "relative",
-                "overflow": "auto"
-            });
-
             //labels
             $(".questions").children("label").css({
                 "background-color": "#36C2E3",
@@ -93,13 +88,14 @@
             });
             //END btnNext
 
-            //question 1
             $(".questions-container").css({
-                "top": "10%",
+                "top": "25%",
                 "max-width": "100%",
                 "margin": "0 auto",
                 "position": "relative"
             });
+
+            //question 1
 
             $(".questions-container").children(".label-help").css({
                 "display": "inline-block",
@@ -139,6 +135,10 @@
                 "border": "none",
                 "border-bottom": "2px solid black",
                 "background-color": "transparent"
+            });
+
+            $("#question3-committment").css({
+                "margin-top": "50%"
             });
             //END question 3
 
@@ -285,6 +285,8 @@
                 "height": winHeight,
                 "margin": "0 auto",
                 "text-align": "center",
+                "position": "relative",
+                "overflow": "auto",
                 //"outline": "1px solid black" //TEMP
             });
 
