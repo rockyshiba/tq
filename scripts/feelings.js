@@ -35,13 +35,17 @@
 
             $("body").css({"font-family": "roboto"});
             //END TEMP SCAFFOLDING
-
             $(".questions p").css({
                 "margin-top": "50px",
                 "display": "inline-block",
                 "font-size": "24px",
                 "font-family": "Quicksand, sans-serif",
                 "font-weight": "regular"
+            });
+
+            $(".questions p:first-child").css({
+                "margin-top": "125px",
+                "margin-bottom": "25px"
             });
 
             //labels
@@ -71,20 +75,24 @@
             $(".btnNext").css({
                 "width": "225px",
                 "height": "50px",
-                "position": "absolute",
+                //"position": "absolute",
                 "text-align": "center",
-                "margin-left": "auto",
-                "margin-right": "auto",
-                "left": "0",
-                "right": "0",
-                "bottom": "60px",
+                "margin": "0 auto",
+                "margin-top": "20px",
+                //"margin-left": "auto",
+                //"margin-right": "auto",
+                //"left": "0",
+                //"right": "0",
+                //"bottom": "60px",
                 "background-color": "#989898", 
                 "color": "#414041",
                 "border": "none",
                 "font-family": "roboto, sans-serif",
                 "font-weight": "light",
                 "font-size": "19px",
-                "border-radius": "5px"
+                "border-radius": "5px",
+                "display": "inline-block",
+                "pointer": "cursor"
             });
             //END btnNext
 
@@ -92,20 +100,18 @@
             $("#btnDone").css({
                 "width": "225px",
                 "height": "50px",
-                "position": "absolute",
                 "text-align": "center",
-                "margin-left": "auto",
-                "margin-right": "auto",
-                "left": "0",
-                "right": "0",
-                "bottom": "60px",
+                "margin": "0 auto",
+                "margin-top": "20px",
                 "background-color": "#989898", 
                 "color": "#414041",
                 "border": "none",
                 "font-family": "roboto, sans-serif",
                 "font-weight": "light",
                 "font-size": "19px",
-                "border-radius": "5px"
+                "border-radius": "5px",
+                "display": "inline-block",
+                "pointer": "cursor"
             });
             //END btnDone
 
@@ -159,7 +165,7 @@
             });
 
             $("#question3-committment").css({
-                "margin-top": "50%"
+                "display": "block"    
             });
             //END question 3
 
@@ -311,7 +317,7 @@
                 //"outline": "1px solid black" //TEMP
             });
 
-            //mobile
+            //MOBILE
             if(window.innerWidth < 780){
 
             }
@@ -584,7 +590,7 @@
 
                 //Reveal the other option
             $("label[for=radio-referral-other]").click(function(){
-                $("textarea[name=radio-referral]").slideDown();
+                $("textarea[name=radio-referral-custom]").slideDown();
             });
             //END question 8
 

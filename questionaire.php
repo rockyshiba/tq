@@ -11,6 +11,7 @@
         <?php
             if(isset($_POST['feelings-submit'])){
                 var_dump($_POST);
+                echo("<br>" . serialize($_POST['checkbox-help']));
             }
         ?>
         <div id="feelings-container">
@@ -71,7 +72,7 @@
                     <button type="button" class="btnNext">Next question</button>
                 </section>
                 <section id="question4" class="questions">
-                    <p>What are your expectations of how long it will take to get better? (select one)</p>
+                    <p>What are your expectations of how long it will take to get better? <br/>(select one)</p>
                     <div class="questions-container">
                         <label for="radio-long--2">2 sessions</label>
                         <label for="radio-long--8">8 sessions</label>
@@ -136,7 +137,7 @@
                         <label class="label-referral" for="radio-referral-news">News outlet<br></label>
                         <label class="label-referral" for="radio-referral-uni-college">University or<br>College</label>
                         <label class="label-referral" for="radio-referral-other">Other</label>
-                        <textarea class="label-referral" name="radio-referral" rows="5" cols="40" placeholder="How did you hear about us?"></textarea>
+                        <textarea class="label-referral" name="radio-referral-custom" rows="5" cols="40" placeholder="How did you hear about us?"></textarea>
                     </div>
                     <input type="radio" name="radio-referral" id="radio-referral-social-media" value="social media">
                     <input type="radio" name="radio-referral" id="radio-referral-ttc" value="ttc">
