@@ -110,7 +110,7 @@
             //END btnDone
 
             $(".questions-container").css({
-                "top": "25%",
+                //"top": "25%",
                 "max-width": "100%",
                 "margin": "0 auto",
                 "position": "relative"
